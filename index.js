@@ -1,8 +1,6 @@
-/*
-1 meter = 3.281 feet
-1 liter = 0.264 gallon
-1 kilogram = 2.204 pound
-*/
+// 1 meter = 3.281 feet
+// 1 liter = 0.264 gallon
+// 1 kilogram = 2.204 pound
 
 const unitInputEl = document.getElementById("unit-input");
 const convertBtnEl = document.getElementById("convert-btn");
@@ -20,9 +18,9 @@ function resetInput() {
 }
 
 function convertUnits(value) {
-    let meterToFeet = 3.28084;
-    let literToGallon = 0.264172;
-    let kiloToPound = 2.20462;
+    let meterToFeet = 3.281;
+    let literToGallon = 0.264;
+    let kiloToPound = 2.204;
 
     let lengthFeet = value * meterToFeet;
     let lengthMeters = value / meterToFeet;
@@ -31,9 +29,9 @@ function convertUnits(value) {
     let volumeLiters = value / literToGallon;
 
     let massPounds = value * kiloToPound;
-    let massKilos = value / kiloToPound;
+    let massKilo = value / kiloToPound;
 
-    return { lengthFeet, lengthMeters, volumeGallons, volumeLiters, massPounds, massKilos };
+    return { lengthFeet, lengthMeters, volumeGallons, volumeLiters, massPounds, massKilo };
 }
 
 function renderConversion(value) {
@@ -41,7 +39,7 @@ function renderConversion(value) {
 
     let lengthConversion = `${value} meters = ${calculateValues.lengthFeet.toFixed(3)} feet | ${value} feet = ${calculateValues.lengthMeters.toFixed(3)} meters`;
     let volumeConversion = `${value} liters = ${calculateValues.volumeGallons.toFixed(3)} gallons | ${value} gallons = ${calculateValues.volumeLiters.toFixed(3)} liters`;
-    let massConversion = `${value} kilos = ${calculateValues.massPounds.toFixed(3)} pounds | ${value} pounds = ${calculateValues.massKilos.toFixed(3)} kilos`;
+    let massConversion = `${value} kilos = ${calculateValues.massPounds.toFixed(3)} pounds | ${value} pounds = ${calculateValues.massKilo.toFixed(3)} kilos`;
 
     lengthConversionEl.textContent = lengthConversion;
     volumeConversionEl.textContent = volumeConversion;
