@@ -1,4 +1,4 @@
-body{
+body {
   font-family: 'Roboto', sans-serif;
   margin: 0;
   min-block-size: 100vh;
@@ -15,7 +15,6 @@ body{
   inline-size: clamp(18rem, 90vw, 30rem);
   border-radius: 8px;
   overflow: hidden;
-  border: 1px solid white;
 }
 
 .conversion-section {
@@ -61,6 +60,7 @@ body{
   display: grid;
   gap: 1em;
   background-color: #F4F4F4;
+  border: 5px solid #FFFFFF;
 }
 
 .conversion-section,
