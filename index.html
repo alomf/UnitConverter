@@ -1,8 +1,33 @@
-<html>
-    <head>
-        <link rel="stylesheet" href="index.css">
-    </head>
-    <body>
-        <script src="index.js"></script>
-    </body>
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Unit Converter</title>
+    <link rel="stylesheet" href="./index.css">
+</head>
+<body>
+    <main class="main">
+        <section class="conversion-section">
+            <h1 class="conversion-title">metric/imperial unit conversion</h1>
+            <input type="number" name="unit" id="unit-input" class="unit-input" min="0" step="any">
+            <button type="button" id="convert-btn" class="convert-btn" disabled>convert</button>
+        </section>
+        <section class="conversion-details">
+            <div class="conversion-item">
+                <h2 class="conversion-subtitle">Length (Meters/Feet)</h2>
+                <p id="length-conversion" class="conversion-text">0 meters = 0 feet | 0 feet = 0 meters</p>
+            </div>
+            <div class="conversion-item">
+                <h2 class="conversion-subtitle">Volume (Liters/Gallons)</h2>
+                <p id="volume-conversion" class="conversion-text">0 liters = 0 gallons | 0 gallons = 0 liters</p>
+            </div>
+            <div class="conversion-item">
+                <h2 class="conversion-subtitle">Mass (Kilograms/Pounds)</h2>
+                <p id="mass-conversion" class="conversion-text">0 kilos = 0 pounds | 0 pounds = 0 kilos</p>
+            </div>
+        </section>
+    </main>
+    <script src="./index.js"></script>
+</body>
 </html>
